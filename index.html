@@ -370,25 +370,139 @@
             box-shadow: 0 20px 40px rgba(255, 215, 0, 0.3);
         }
 
+        @media (max-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+                max-width: 600px;
+            }
+            
+            .service-card {
+                padding: 18px;
+            }
+            
+            .header h1 {
+                font-size: 2.5rem;
+            }
+        }
+
         @media (max-width: 768px) {
             .header h1 {
                 font-size: 2rem;
             }
             
+            .header .subtitle {
+                font-size: 1rem;
+            }
+            
             .services-grid {
-                grid-template-columns: 1fr;
-                padding: 0 10px;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+                padding: 0 15px;
+                max-width: 500px;
             }
             
             .service-card {
-                padding: 25px;
+                padding: 15px;
+                border-radius: 12px;
+            }
+            
+            .service-icon {
+                font-size: 2rem;
+                margin-bottom: 10px;
+            }
+            
+            .service-title {
+                font-size: 1.1rem;
+                margin-bottom: 8px;
+            }
+            
+            .service-description {
+                font-size: 0.8rem;
+                line-height: 1.4;
             }
             
             .availability {
                 top: 10px;
                 right: 10px;
-                padding: 10px 15px;
+                padding: 8px 12px;
+                font-size: 0.8rem;
+            }
+            
+            .popup-content {
+                padding: 30px 25px;
+                max-width: 350px;
+            }
+            
+            .popup-title {
+                font-size: 2rem;
+                margin-bottom: 15px;
+            }
+            
+            .popup-message {
+                font-size: 1rem;
+                margin-bottom: 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .star-icon {
+                font-size: 1.5rem;
+                margin: 0 5px;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
+                padding: 0 10px;
+            }
+            
+            .service-card {
+                padding: 12px;
+                border-radius: 10px;
+            }
+            
+            .service-icon {
+                font-size: 1.8rem;
+                margin-bottom: 8px;
+            }
+            
+            .service-title {
+                font-size: 1rem;
+                margin-bottom: 6px;
+            }
+            
+            .service-description {
+                font-size: 0.75rem;
+            }
+            
+            .popup-content {
+                padding: 25px 20px;
+                max-width: 300px;
+            }
+            
+            .popup-title {
+                font-size: 1.8rem;
+                margin-bottom: 12px;
+            }
+            
+            .popup-message {
                 font-size: 0.9rem;
+                margin-bottom: 20px;
+            }
+            
+            .telegram-button {
+                padding: 12px 25px;
+                font-size: 1rem;
+            }
+            
+            .footer {
+                font-size: 0.8rem;
+                padding: 8px 15px;
             }
         }
 
@@ -521,9 +635,9 @@
 
         <div class="services-grid">
             <div class="service-card form-card">
-                <a href="#" onclick="openTicketForm()" class="phone-link">
+                <a href="http://trainnika.ir/" target="_blank" class="phone-link">
                     <div class="service-icon">📝</div>
-                    <h3 class="service-title">فرم صدور بلیط</h3>
+                    <h3 class="service-title">فرم ثبت نام صدور بلیط قطار</h3>
                     <p class="service-description">تکمیل فرم آنلاین<br>برای صدور بلیط قطار</p>
                 </a>
             </div>
@@ -595,10 +709,7 @@
 
         // Ticket form functionality
         function openTicketForm() {
-            // اینجا می‌توانید لینک فرم خودتان را قرار دهید
-            window.open('https://forms.google.com/your-form-link', '_blank');
-            // یا می‌توانید به صفحه دیگری redirect کنید:
-            // window.location.href = 'ticket-form.html';
+            window.open('http://trainnika.ir/', '_blank');
         }
 
         // Add interactive effects
